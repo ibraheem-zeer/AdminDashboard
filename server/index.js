@@ -26,12 +26,12 @@ app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
 
+// Mongoose Setup
 const PORT = process.env.PORT || 9000;
+
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
-    app.listen(PORT, () =>
-      console.log(`Server is Listening on port : ${PORT}`)
-    );
+    app.listen(PORT, () => console.log(`Server is listening on port: ${PORT}`));
   })
-  .catch((err) => console.log(`Error : ${err}`));
+  .catch((err) => console.log(`Error: ${err}`));
