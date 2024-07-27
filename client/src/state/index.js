@@ -1,12 +1,12 @@
-import { cerateSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-const initalState = {
+const initialState = {
   mode: "dark",
 };
 
 export const globalSlice = createSlice({
   name: "global",
-  initalState,
+  initialState,
   reducers: {
     setMode: (state) => {
       state.mode = state.mode === "light" ? "dark" : "light";
@@ -15,4 +15,5 @@ export const globalSlice = createSlice({
 });
 
 export const { setMode } = globalSlice.actions;
-export default globalSlice.reducers;
+
+export default globalSlice.reducer;

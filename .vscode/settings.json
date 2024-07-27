@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "*.jsx": "javascriptreact"
+        "*.jsx": "javascriptreact",
+        "*.js": "javascriptreact"
     }
 }
